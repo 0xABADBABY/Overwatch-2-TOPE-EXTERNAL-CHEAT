@@ -223,7 +223,7 @@ HWND SpoofFindWindow(LPCTSTR lpClassName, LPCTSTR lpWindowName)
 
 HWND SpoofFindWindowA(LPCSTR lpClassName, LPCSTR lpWindowName)
 {
-    static FindWindowA_t origFindWindowA = (FindWindow_t)GetProcAddress(GetModuleHandleA("user32.dll"), "FindWindowA");
+    static FindWindowA_t origFindWindowA = (FindWindowA_t)GetProcAddress(GetModuleHandleA("user32.dll"), "FindWindowA");
 
     std::random_device rd;
     std::mt19937 gen(rd());
